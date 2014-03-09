@@ -4,12 +4,16 @@ from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
 
+from filebrowser.sites import site
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^tinymce/', include('tinymce.urls')),
 
-    url(r'^admin/filebrowser/', include('filebrowser.urls')),
+    url(r'^admin/filebrowser/', include(site.urls)),
+
+    (r'^grappelli/', include('grappelli.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 

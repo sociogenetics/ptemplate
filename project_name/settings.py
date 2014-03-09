@@ -38,6 +38,8 @@ ADMINS = (
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
+    'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,8 +53,6 @@ INSTALLED_APPS = (
     'mpttadmin',
 
     'tinymce',
-
-    'filebrowser',
 
     'xendor',
 
@@ -119,25 +119,30 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images) and media files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'public/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '{{ project_name }}/public/media')
 MEDIA_URL = '/media/'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'public/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '{{ project_name }}/public/static')
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "{{ project_name }}/static"),
 )
 
+
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, '{{ project_name }}/templates'),
 )
+
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+
 NO_IMG_PATH = 'no_img.png'
+
 
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': "safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
@@ -153,9 +158,7 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 
-import sys
-sys.path.append(os.path.join('/Users/tahy/workspace', 'lib'))
-sys.path.append(os.path.join('/Users/tahy/workspace/lib', 'xendor'))
-sys.path.append(os.path.join('/Users/tahy/workspace/lib', 'django-filebrowser-no-grappelli'))
+GRAPPELLI_ADMIN_HEADLINE = u'Агентство «Социогенетика»'
+GRAPPELLI_ADMIN_TITLE = u'Агентство «Социогенетика»'
 
 

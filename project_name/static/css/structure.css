@@ -1,0 +1,24 @@
+/*uncomment this to fix footer to bottom */
+/** {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+/*html {height: 100%;}*/
+
+/*body {*/
+    /*min-height: 100%;*/
+    /*position: relative;*/
+/*}*/
+
+/*body > .container {*/
+    /*position: relative;*/
+    /*padding-bottom: 100px;*/
+/*}*/
+
+
+/*footer {*/
+    /*height: 90px;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*width: 100%;   */
+/*}*/

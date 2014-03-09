@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% load xendor_tags %}
+	<head>
+		{% include 'include/head.html' %}
+	</head>
+	<body>
+        {% include 'include/header.html' %}
+
+		{% block content %}{% endblock %}
+
+		{% include 'include/js.html' %}
+		{% block js %}{% endblock %}
+
+        {% include 'include/footer.html' %}
+	</body>
+</html>

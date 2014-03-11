@@ -5,9 +5,12 @@
 		{% include 'include/head.html' %}
 	</head>
 	<body>
+
         {% include 'include/header.html' %}
 
-		{% block content %}{% endblock %}
+        <div class="container content">
+            {% block content %}{% endblock %}
+        </div>
 
 		{% include 'include/js.html' %}
 		{% block js %}{% endblock %}
@@ -15,3 +18,5 @@
         {% include 'include/footer.html' %}
 	</body>
 </html>
+
+        

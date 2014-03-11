@@ -1,1 +1,23 @@
-site header
+{% load xendor_tags %}
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="logo">
+                    <a href="/">
+                        <img src="{{ STATIC_URL }}/img/logo.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                {% menu "parent=MAIN" %}
+                <br class="clear">
+                <div class="gap-20"></div>
+                <div class="xendor text-right">
+                    <a href="http://xendor.ru" target="_blank">Xendor Fondation 8.0&rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+

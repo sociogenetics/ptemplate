@@ -9,3 +9,4 @@ django-filebrowser
 django-grappelli
 django-bootstrap3
 raven
+simplejson

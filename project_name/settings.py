@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #'raven.contrib.django.raven_compat',
 
     'south',
 
@@ -55,6 +56,7 @@ INSTALLED_APPS = (
     'tinymce',
 
     'xendor',
+    'bootstrap3',
 
     ###===user-generated-apps===###
 )
@@ -97,7 +99,7 @@ DATABASES = {
         'NAME': '{{ project_name }}',          # Or path to database file if using sqlite3.
         'USER': 'root',                        # Not used with sqlite3.
         'PASSWORD': 'changeme',                  # Not used with sqlite3.
-        'HOST': '5.172.14.177',                # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': '82.151.212.181',                # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                        # Set to empty string for default. Not used with sqlite3.
         'TEST_CHARSET': 'utf8',
         'TEST_COLLATION': 'utf8_general_ci',
